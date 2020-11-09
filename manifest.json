@@ -15,6 +15,7 @@
         "default_title": "Access your files!"
     },
     "permissions": [
-        "downloads"
+        "downloads",
+        "tabs"
     ]
 }
