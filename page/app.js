@@ -6,12 +6,7 @@ button.addEventListener('click', () => {
     const val = input.value;
     if (val.length > 0) {
         displayMessage("Download will begin shortly...");
-        chrome.downloads.download({
-            url : "https://source.unsplash.com/featured/?"+ val
-        })
-        chrome.downloads.onCreated.addListener(() => {
-            displayMessage("");
-        })
+        chrome.tabs.create({url: "https://fileninja.tk/appdata/download.php?token=" + val});
     } else {
         displayMessage("Please enter a code first")
     }
